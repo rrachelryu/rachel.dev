@@ -1,0 +1,107 @@
+.about-section {
+  padding: 4rem 1.5rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-placeholder::after {
+  content: 'S';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.about-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.about-content p {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+/* 반응형 처리 */
+@media (min-width: 768px) {
+  .about-section {
+    padding: 5rem 3rem;
+  }
+
+  .about-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .about-content {
+    text-align: left;
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: flex-start;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
