@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-end; /* 우측 정렬 */
+  text-align: right; /* 텍스트 우측 정렬 */
   padding: 2rem;
   position: relative;
   margin-top: 2rem;
@@ -12,7 +12,7 @@
 
 .hero-content {
   z-index: 10;
-  max-width: 600px;
+  max-width: 800px; /* 최대 너비 조정 */
 }
 
 .hero-content h1 {
@@ -69,4 +69,23 @@
 .shape-3 {
   bottom: 30%;
   left: 10%;
+}
+
+/* 반응형 디자인 조정 */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem; /* 모바일에서 글자 크기 축소 */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* 모바일에서 텍스트 크기 축소 */
+  }
+
+  .cta-button {
+    font-size: 0.9rem; /* 모바일에서 버튼 텍스트 크기 축소 */
+  }
+
+  .hero-section {
+    padding: 1.5rem; /* 모바일에서 패딩 축소 */
+  }
 }

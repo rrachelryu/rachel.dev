@@ -6,6 +6,8 @@ import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import AboutSection from './components/AboutSection'
 import './assets/styles/App.css'
+import { LanguageProvider } from './context/LanguageContext'
+import ContactForm from './components/ContactForm'
 
 const AppContent: React.FC = () => {
   const { themeMode } = useApp()
@@ -24,11 +26,7 @@ const AppContent: React.FC = () => {
 }
 
 const App: React.FC = () => {
-  return (
-    <AppProvider>
-      <AppContent />
-    </AppProvider>
-  )
+  return <AppContent />
 }
 
 export default App

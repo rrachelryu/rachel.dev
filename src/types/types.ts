@@ -1,6 +1,5 @@
-// src/types.ts
-
-export type TranslationKeys =
+// StringTranslationKeys 타입 정의
+export type StringTranslationKeys =
   | 'navHome'
   | 'navServices'
   | 'navProjects'
@@ -36,13 +35,38 @@ export type TranslationKeys =
   | 'toolsSkills'
   | 'darkMode'
   | 'lightMode'
+  // SEO 관련 키 추가
+  | 'siteTitle'
+  | 'siteDescription'
+  | 'siteKeywords'
+  | 'heroTitleAria'
+  | 'ctaButtonAria'
 
+// 경험 타입 정의
+export interface Experience {
+  year: string
+  company: string
+  project: string
+}
+
+// 언어 타입
 export type Language = 'en' | 'ko'
 
-export type Translations = {
-  [key in Language]: {
-    [key in TranslationKeys]?: string // 기존 문자열 키
+// Translations 타입 정의 (experiences를 각 언어에 포함)
+export interface Translations {
+  en: {
+    [key in StringTranslationKeys]: string
+    // experiences가 추가된 타입
   } & {
-    experiences?: { year: string; company: string; project: string }[] // 추가된 experiences
+    experiences: Experience[]
+  }
+  ko: {
+    [key in StringTranslationKeys]: string
+    // experiences가 추가된 타입
+  } & {
+    experiences: Experience[]
   }
 }
+
+// 테마 모드 타입
+export type ThemeMode = 'light' | 'dark'
