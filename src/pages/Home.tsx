@@ -14,6 +14,7 @@ import ContactSection from '../components/ContactForm'
 
 // LanguageContext 사용
 import { useLanguage } from '../context/LanguageContext'
+import HireMeModal from '../components/HireMeModal'
 
 const Home: React.FC = () => {
   const { currentLanguage, setLanguage } = useLanguage()
@@ -21,6 +22,8 @@ const Home: React.FC = () => {
 
   // 애니메이션 적용
   useFadeInAnimation('.animate-item')
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen">
@@ -36,7 +39,8 @@ const Home: React.FC = () => {
       </Helmet>
 
       {/* 각 섹션을 별도 컴포넌트로 분리 */}
-      <HeroSection />
+      <HeroSection onHireMeClick={() => setIsModalOpen(true)} />
+      {isModalOpen && <HireMeModal onClose={() => setIsModalOpen(false)} />}
       <ServicesSection />
       <ProjectsSection />
       <AboutSection />

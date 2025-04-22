@@ -9,9 +9,17 @@ export const translations: Translations = {
     navProjects: 'Projects',
     navAbout: 'About',
     navContact: 'Contact',
-    heroTitle: "Hi, I'm a Full Stack Developer",
+    heroTitle: 'Hi, I’m <strong>Rachel Ryu</strong>',
+
     heroSubtitle:
-      'I build enterprise-grade applications tailored to your business needs.',
+      'Creative Full-Stack Developer passionate about crafting digital experiences.',
+    //ctaButton: 'Let’s Talk',
+
+    hireTitle: 'Let’s Work Together',
+    hireSubtitle:
+      'I’m available for freelance, consulting, or exciting collaborations.',
+    hireButton: 'Hire Me',
+    hireButtonAria: 'Click to contact Rachel',
     ctaButton: 'Hire Me',
     servicesTitle: 'My Services',
     webDev: 'Website Development',
@@ -98,10 +106,16 @@ export const translations: Translations = {
     navProjects: '프로젝트',
     navAbout: '소개',
     navContact: '연락처',
-    heroTitle: '안녕하세요<br/> 풀스택 개발자입니다',
-    heroSubtitle:
-      '비즈니스 요구에 맞는 <br/>엔터프라이즈급 애플리케이션을 구축합니다.',
-    ctaButton: '채용하기',
+    heroTitle: '안녕하세요, <strong>Rachel Ryu</strong>입니다',
+    heroTitleAria: '안녕하세요, Rachel Ryu입니다',
+    heroSubtitle: '창의적인 디지털 경험을 만드는 풀스택 개발자입니다.',
+    ctaButton: '문의하기',
+    ctaButtonAria: '저에게 연락하세요',
+
+    hireTitle: '함께 일해보실래요?',
+    hireSubtitle: '프리랜서, 컨설팅, 협업 등 다양한 프로젝트를 환영합니다.',
+    hireButton: '지금 연락하기',
+    hireButtonAria: 'Rachel에게 연락하세요',
     servicesTitle: '내 서비스',
     webDev: '웹사이트 개발',
     webDevDesc: '현대적인 프레임워크로 맞춤형 웹사이트 및 웹 애플리케이션 구축',
@@ -138,8 +152,7 @@ export const translations: Translations = {
     siteTitle: '레이첼 류 | 풀스택 개발자',
     siteDescription: '엔터프라이즈 솔루션 전문 풀스택 개발자',
     siteKeywords: '자바, 스프링, 리액트, 뷰, 풀스택, 개발자, 금융',
-    heroTitleAria: '레이첼 류를 풀스택 개발자로 소개하는 메인 제목',
-    ctaButtonAria: '레이첼 류에게 전문 서비스 문의하기',
+
     // 한국어 버전의 경험
     experiences: [
       { year: '2018~2019', company: 'BNK캐피탈', project: '대출 시스템' },
