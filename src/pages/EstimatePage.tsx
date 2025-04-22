@@ -112,7 +112,11 @@ const EstimatePage = () => {
         <h3 className="section-title">{t('estimateContactTitle')}</h3>
         <p className="contact-description">{t('estimateContactDesc')}</p>
 
-        <form className="estimate-form">
+        <form
+          className="estimate-form"
+          action="https://formspree.io/f/mqaqkabj" // 여러분의 form ID로 바꾸세요
+          method="POST"
+        >
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">{t('formName')}</label>
