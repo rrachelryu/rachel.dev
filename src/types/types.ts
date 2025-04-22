@@ -41,6 +41,9 @@ export type StringTranslationKeys =
   | 'siteKeywords'
   | 'heroTitleAria'
   | 'ctaButtonAria'
+  | 'techStackTitle'
+  | 'techStackDesc1'
+  | 'techStackDesc2'
 
 // 경험 타입 정의
 export interface Experience {

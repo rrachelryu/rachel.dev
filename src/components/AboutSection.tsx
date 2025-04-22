@@ -48,13 +48,6 @@ const AboutSection: React.FC = () => {
         <div className="about-content">
           <h2>{t('aboutTitle')}</h2>
           <p>{t('aboutDesc')}</p>
-          <div className="tech-stack">
-            {techStack.map((tech, index) => (
-              <div key={index} className="tech-item">
-                <span>{tech.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

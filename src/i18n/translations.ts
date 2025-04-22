@@ -86,6 +86,11 @@ export const translations: Translations = {
         project: 'CBDC System Development',
       },
     ],
+    techStackTitle: 'Technical Expertise',
+    techStackDesc1:
+      'With over 10 years of experience as a full stack developer, I have focused on financial sector projects.',
+    techStackDesc2:
+      'Major clients include NH Bank, BNK Capital, Kyobo Life, Shinhan Bank, DB Insurance, and the Bank of Korea.',
   },
   ko: {
     navHome: '홈',
@@ -164,5 +169,10 @@ export const translations: Translations = {
         project: 'CBDC 시스템 구축',
       },
     ],
+    techStackTitle: '기술 역량',
+    techStackDesc1:
+      '10년 이상의 경력을 가진 풀스택 개발자로서, 금융권 프로젝트에 집중해왔습니다.',
+    techStackDesc2:
+      '주요 고객으로는 농협, BNK캐피탈, 교보생명, 신한은행, DB손해보험, 한국은행 등이 있습니다.',
   },
 }

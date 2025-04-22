@@ -6,8 +6,10 @@ import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import AboutSection from './components/AboutSection'
 import './assets/styles/App.css'
+import './index.css'
 import { LanguageProvider } from './context/LanguageContext'
 import ContactForm from './components/ContactForm'
+import TechStack from './components/TechStack'
 
 const AppContent: React.FC = () => {
   const { themeMode } = useApp()
@@ -20,6 +22,7 @@ const AppContent: React.FC = () => {
         <ServicesSection />
         <ProjectsSection />
         <AboutSection />
+        <TechStack />
       </main>
     </div>
   )
