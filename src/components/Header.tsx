@@ -1,46 +1,62 @@
 import React, { useState, useEffect, CSSProperties } from 'react'
 import { useApp } from '../context/AppContext'
 import '../assets/styles/Header.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Header: React.FC = () => {
-  const { themeMode, toggleTheme, language, setLanguage, t } = useApp()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const {
+    themeMode,
+    toggleTheme,
+    language,
+    setLanguage,
+    t,
+    menuOpen,
+    setMenuOpen,
+  } = useApp()
+
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
 
-  // 스크롤 이벤트 리스너 추가
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
-
-    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // body에 padding을 추가하는 효과
   useEffect(() => {
-    document.body.style.paddingTop = '70px' // 헤더 높이에 맞게 조정
-
+    document.body.style.paddingTop = '70px'
     return () => {
       document.body.style.paddingTop = '0'
     }
   }, [])
 
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
+
+  // 👉 메인 페이지 hash 스크롤 이동
+  const handleNavigateWithHash = (hash: string) => {
+    if (location.pathname !== '/') {
+      navigate(`/#${hash}`)
+    } else {
+      const el = document.getElementById(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+    setMenuOpen(false)
+  }
+
   const headerStyle: CSSProperties = {
-    position: 'fixed' as const,
+    position: 'fixed',
     top: 0,
     left: 0,
     width: '100%',
@@ -96,28 +112,25 @@ const Header: React.FC = () => {
       <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
           <li>
-            <a href="#home" onClick={toggleMenu}>
-              {t('navHome')}
-            </a>
+            <a onClick={() => handleNavigateWithHash('home')}>{t('navHome')}</a>
           </li>
           <li>
-            <a href="#services" onClick={toggleMenu}>
+            <a onClick={() => handleNavigateWithHash('services')}>
               {t('navServices')}
             </a>
           </li>
           <li>
-            <a href="#projects" onClick={toggleMenu}>
+            <a onClick={() => handleNavigateWithHash('projects')}>
               {t('navProjects')}
             </a>
           </li>
           <li>
-            <a href="#about" onClick={toggleMenu}>
+            <a onClick={() => handleNavigateWithHash('about')}>
               {t('navAbout')}
             </a>
           </li>
-
           <li>
-            <Link to="/estimate" onClick={toggleMenu}>
+            <Link to="/estimate" onClick={() => setMenuOpen(false)}>
               {t('navContact')}
             </Link>
           </li>
