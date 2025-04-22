@@ -1,12 +1,49 @@
 .about-section {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1rem;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+}
+
+body:not(.dark) .about-section {
+  background-color: var(--background-light);
+  color: var(--text-dark);
 }
 
 .about-container {
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.about-image .avatar-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
 }
 
 .about-image {
@@ -77,6 +114,12 @@
   align-items: center;
   justify-content: center;
   color: var(--primary-color);
+}
+
+/* 다크 모드 처리 */
+.dark .tech-logo {
+  background-color: var(--background-dark);
+  border: 1px solid var(--primary-light);
 }
 
 /* 반응형 처리 */
