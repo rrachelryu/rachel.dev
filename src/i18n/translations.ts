@@ -99,6 +99,68 @@ export const translations: Translations = {
       'Experienced Full Stack Developer specializing in enterprise-level solutions.',
     siteKeywords:
       'java, spring, react, vue, full stack, developer, financial, enterprise',
+    // Estimate Page Translations
+    estimateTitle: 'Premium Website Development Estimate',
+    estimateBadge: 'Premium Service',
+    estimateDescription:
+      'Custom estimates based on 12 years of senior developer expertise and practical experience.',
+
+    // Estimate Table
+    estimateTableHeader1: 'Item',
+    estimateTableHeader2: 'Description',
+    estimateTableHeader3: 'Estimated Cost',
+
+    // Estimate Items
+    basicReactSite: 'Basic React Website',
+    basicReactSiteDesc:
+      'Responsive UI, SEO optimization, initial template with branding consideration (corporate, hospital, e-commerce, etc.)',
+    basicReactSitePrice: '1,200,000 KRW ~',
+
+    additionalPage: 'Additional Page',
+    additionalPageDesc:
+      'Structural design considering UI flow, including micro-interactions and premium components',
+    additionalPagePrice: '100,000 KRW / page',
+
+    springBackend: 'Spring Boot Backend',
+    springBackendDesc:
+      'JPA-based DB design, REST API + JWT authentication, including exception handling/security design',
+    springBackendPrice: '2,000,000 KRW ~',
+
+    awsDeployment: 'AWS Infrastructure Deployment',
+    awsDeploymentDesc:
+      'Including CI/CD, EC2, S3, Route53, security groups, SSL, monitoring',
+    awsDeploymentPrice: '800,000 KRW ~',
+
+    adminFeatures: 'Admin Features',
+    adminFeaturesDesc:
+      'Dashboard, search/filter/sort, role-based access control, statistics/graph visualization',
+    adminFeaturesPrice: '1,800,000 KRW ~',
+
+    aiChatbot: 'AI Chatbot Integration',
+    aiChatbotDesc:
+      'OpenAI API integration, FAQ-based prompt design, conversation history storage, UX tuning',
+    aiChatbotPrice: '2,000,000 KRW ~',
+
+    // Contact Form
+    estimateContactTitle: 'Request a Quote',
+    estimateContactDesc:
+      'Need a precise estimate tailored to your specific project requirements? Fill in the information below, and I will send you a detailed quote within 24 hours.',
+
+    // Form Fields
+    formName: 'Name',
+    formNamePlaceholder: 'John Doe',
+    formPhone: 'Phone',
+    formPhonePlaceholder: '123-456-7890',
+    formEmail: 'Email',
+    formEmailPlaceholder: 'example@domain.com',
+    formProject: 'Project Details',
+    formProjectPlaceholder:
+      'Please describe your desired features and requirements in detail.',
+    formSubmit: 'Request Quote',
+
+    // Disclaimer
+    estimateDisclaimer:
+      '* The above estimates exclude VAT and may be adjusted according to the complexity of requirements and after consultation.',
   },
 
   ko: {
@@ -194,5 +256,65 @@ export const translations: Translations = {
     siteDescription: '엔터프라이즈 시스템 전문 풀스택 개발자',
     siteKeywords:
       '자바, 스프링, 리액트, 뷰, 풀스택, 개발자, 금융, 웹사이트 외주',
+    // 견적 페이지 번역
+    estimateTitle: '홈페이지 제작 프리미엄 견적',
+    estimateBadge: '프리미엄 서비스',
+    estimateDescription:
+      '12년차 시니어 개발자의 전문성과 실전 경험을 바탕으로 한 고급 맞춤형 견적입니다.',
+
+    // 견적 표 헤더
+    estimateTableHeader1: '항목',
+    estimateTableHeader2: '설명',
+    estimateTableHeader3: '예상 비용',
+
+    // 견적 항목들
+    basicReactSite: '기본형 React 사이트',
+    basicReactSiteDesc:
+      '반응형 UI, SEO 최적화, 브랜딩 고려한 초기 템플릿 제공 (기업, 병원, 쇼핑몰 등)',
+    basicReactSitePrice: '1,200,000원 ~',
+
+    additionalPage: '페이지 추가',
+    additionalPageDesc:
+      'UI 흐름 고려한 구조 설계, 마이크로 인터랙션 및 고급 컴포넌트 포함',
+    additionalPagePrice: '100,000원 / 페이지',
+
+    springBackend: 'Spring Boot 백엔드',
+    springBackendDesc:
+      'JPA 기반 DB 설계, REST API + JWT 인증, 예외처리/보안 설계 포함',
+    springBackendPrice: '2,000,000원 ~',
+
+    awsDeployment: 'AWS 인프라 배포',
+    awsDeploymentDesc: 'CI/CD, EC2, S3, Route53, 보안 그룹, SSL, 모니터링 포함',
+    awsDeploymentPrice: '800,000원 ~',
+
+    adminFeatures: '관리자 기능 (어드민)',
+    adminFeaturesDesc:
+      '대시보드, 검색/필터/정렬, 권한별 접근 제어, 통계/그래프 시각화 포함',
+    adminFeaturesPrice: '1,800,000원 ~',
+
+    aiChatbot: 'AI 챗봇 연동',
+    aiChatbotDesc:
+      'OpenAI API 연동, FAQ 기반 프롬프트 설계, 대화 기록 저장, UX 튜닝 포함',
+    aiChatbotPrice: '2,000,000원 ~',
+
+    // 연락처 폼
+    estimateContactTitle: '견적 문의',
+    estimateContactDesc:
+      '구체적인 프로젝트 요구사항에 맞춘 정확한 견적이 필요하신가요? 아래 정보를 입력해 주시면 24시간 이내 상세 견적을 보내드립니다.',
+
+    // 폼 필드
+    formName: '이름',
+    formNamePlaceholder: '홍길동',
+    formPhone: '연락처',
+    formPhonePlaceholder: '010-1234-5678',
+    formEmail: '이메일',
+    formEmailPlaceholder: 'example@domain.com',
+    formProject: '프로젝트 내용',
+    formProjectPlaceholder: '원하시는 기능과 요구사항을 자세히 알려주세요.',
+    formSubmit: '견적 요청하기',
+
+    // 면책 조항
+    estimateDisclaimer:
+      '* 본 견적은 부가세 별도 기준이며, 요구 사항의 난이도 및 협의 내용에 따라 조정될 수 있습니다.',
   },
 }

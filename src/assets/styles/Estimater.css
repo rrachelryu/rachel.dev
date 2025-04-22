@@ -1,0 +1,374 @@
+/* EstimatePage.css */
+:root {
+  --primary-color: #4f46e5;
+  --primary-light: rgba(79, 70, 229, 0.1);
+  --secondary-color: #2563eb;
+  --text-dark: #111827;
+  --text-medium: #4b5563;
+  --text-light: #6b7280;
+  --background-light: #f9fafb;
+  --background-dark: #1f2937;
+  --border-light: #e5e7eb;
+  --border-dark: #374151;
+  --white: #ffffff;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+}
+
+/* 섹션 스타일 */
+.estimate-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 5rem;
+}
+
+/* 헤더 영역 */
+.estimate-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.service-badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: var(--border-radius-full);
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.gradient-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.estimate-description {
+  font-size: 1.25rem;
+  color: var(--text-medium);
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 테이블 스타일 */
+.table-container {
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.estimate-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+.table-head {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--white);
+}
+
+.table-header-cell {
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.header-first {
+  border-top-left-radius: var(--border-radius-lg);
+}
+
+.header-last {
+  border-top-right-radius: var(--border-radius-lg);
+  text-align: right;
+}
+
+.table-row {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.table-row:hover {
+  background-color: var(--background-light);
+}
+
+.table-row.last-row {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 1.5rem;
+  vertical-align: top;
+  color: var(--text-medium);
+}
+
+.item-title {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.description-cell {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.price-cell {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* 양식 스타일 */
+.contact-form-container {
+  margin-top: 3rem;
+  background-color: var(--background-light);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.contact-description {
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.estimate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-medium);
+  margin-bottom: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-light);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.form-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.submit-button {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .estimate-table {
+    background-color: var(--background-dark);
+  }
+
+  .table-row {
+    border-bottom-color: var(--border-dark);
+  }
+
+  .table-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .table-cell {
+    color: #d1d5db;
+  }
+
+  .price-cell {
+    color: #f9fafb;
+  }
+
+  .estimate-description,
+  .contact-description {
+    color: #d1d5db;
+  }
+
+  .contact-form-container {
+    background-color: var(--background-dark);
+    border-color: var(--border-dark);
+  }
+
+  .form-input,
+  .form-textarea {
+    background-color: #374151;
+    border-color: var(--border-dark);
+    color: #f9fafb;
+  }
+
+  .form-label {
+    color: #d1d5db;
+  }
+
+  .table-container {
+    border-color: var(--border-dark);
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .estimate-section {
+    padding: 2rem 1rem;
+  }
+
+  .gradient-title {
+    font-size: 2.25rem;
+  }
+
+  .table-container {
+    border-radius: var(--border-radius-lg);
+  }
+
+  .table-header-cell {
+    padding: 1rem;
+  }
+
+  .table-cell {
+    padding: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service-badge {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.submit-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.submit-button:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+}
