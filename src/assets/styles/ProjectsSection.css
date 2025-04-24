@@ -35,19 +35,18 @@
   height: 100%;
 }
 
-/* 미리보기 이미지 */
+/* 미리보기 이미지 크기 */
 .project-image img {
-  max-width: 100px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  object-fit: cover; /* 이미지 비율 유지 */
+  max-height: 400px; /* 이미지 높이 제한 */
+  /* 비율에 맞게 잘라서 맞추기 */
+  cursor: pointer; /* 이미지 클릭 시 커서 변경 */
+  transition: transform 0.2s ease-in-out; /* 클릭 시 확대 효과 추가 */
 }
 
-/* 이미지 클릭 시 확대 효과 */
+/* 호버 시 이미지 살짝 확대 */
 .project-image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* 호버 시 조금 확대 */
 }
-
 /* 확대된 이미지 모달 - 수정됨 */
 .image-modal {
   position: fixed;
@@ -134,9 +133,17 @@
 .slider-dot.active {
   background-color: var(--primary-color);
 }
+@media (min-width: 1024px) {
+  .project-image img {
+    max-width: 80%; /* PC에서는 80% 크기 */
+  }
+}
 
-/* 모바일에서 이미지 크기 조정 */
+/* 모바일에서 미리보기 이미지 크기 설정 (작게 보이도록) */
 @media (max-width: 768px) {
+  .project-image img {
+    max-width: 60%; /* 모바일에서는 60% 크기 */
+  }
   .image-modal-content {
     width: 95%;
     height: 80%;
