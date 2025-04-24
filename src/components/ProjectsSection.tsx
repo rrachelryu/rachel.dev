@@ -2,25 +2,45 @@ import React, { useState } from 'react'
 import { useApp } from '../context/AppContext'
 import '../assets/styles/ProjectsSection.css'
 
+// React에서 이미지 파일을 직접 임포트하는 방식으로 변경
+import portalImg from '../assets/img/iScreen Shoter - Google Chrome - 250424201334.png'
+import ecommerceImg from '../assets/img/iScreen Shoter - Google Chrome - 250424212334.png'
+import enterpriseImg from '../assets/img/iScreen Shoter - Google Chrome - 250424220356.png'
+
 const ProjectsSection: React.FC = () => {
   const { t } = useApp()
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalImage, setModalImage] = useState('')
 
+  // 이미지 클릭 시 확대 모달 열기
+  const openModal = (image: string) => {
+    setModalImage(image)
+    setIsModalOpen(true)
+  }
+
+  // 모달 닫기
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setModalImage('')
+  }
+
+  // 임포트한 이미지 사용
   const projects = [
     {
       title: t('ecommerce'),
       description: t('ecommerceDesc'),
-      image: 'ecommerce-placeholder.jpg',
+      image: ecommerceImg,
     },
     {
       title: t('enterprise'),
       description: t('enterpriseDesc'),
-      image: 'booking-placeholder.jpg',
+      image: enterpriseImg,
     },
     {
       title: t('portal'),
       description: t('portalDesc'),
-      image: 'portfolio-placeholder.jpg',
+      image: portalImg,
     },
   ]
 
@@ -49,7 +69,21 @@ const ProjectsSection: React.FC = () => {
         >
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <div className="project-image-placeholder"></div>
+              <div
+                className="project-image"
+                onClick={() => openModal(project.image)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-img"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    target.src =
+                      'https://via.placeholder.com/500x300?text=Project+Image'
+                  }}
+                />
+              </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
@@ -76,6 +110,15 @@ const ProjectsSection: React.FC = () => {
           </button>
         </div>
       </div>
+
+      {/* 확대 이미지 모달 */}
+      {isModalOpen && (
+        <div className="image-modal" onClick={closeModal}>
+          <div className="image-modal-content">
+            <img src={modalImage} alt="Expanded View" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

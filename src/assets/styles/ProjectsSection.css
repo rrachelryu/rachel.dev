@@ -27,6 +27,57 @@
   box-sizing: border-box;
 }
 
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 미리보기 이미지 */
+.project-image img {
+  max-width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 이미지 클릭 시 확대 효과 */
+.project-image img:hover {
+  transform: scale(1.1);
+}
+
+/* 확대된 이미지 모달 - 수정됨 */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 내용 - 수정됨 */
+.image-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+
+.image-modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 이미지 비율 유지 */
+  cursor: zoom-out; /* 클릭 시 모달 닫기 효과 */
+}
+
 .project-image-placeholder {
   width: 100%;
   height: 200px;
@@ -82,4 +133,12 @@
 
 .slider-dot.active {
   background-color: var(--primary-color);
+}
+
+/* 모바일에서 이미지 크기 조정 */
+@media (max-width: 768px) {
+  .image-modal-content {
+    width: 95%;
+    height: 80%;
+  }
 }

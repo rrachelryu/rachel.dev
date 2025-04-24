@@ -189,8 +189,8 @@ export const translations: Translations = {
     cloudSolutionsDesc: 'AWS 기반 클라우드 아키텍처 및 MSA 구축',
 
     projectsTitle: '대표 프로젝트',
-    enterprise: '기업 홈페이지',
-    enterpriseDesc: '기업 브랜드를 위한 반응형 웹사이트 구축',
+    enterprise: '기업용 어드민 페이지',
+    enterpriseDesc: '기업 홈페이지 관리를 위한 백오피스 구축',
     ecommerce: '쇼핑몰 플랫폼',
     ecommerceDesc: '결제 시스템이 포함된 온라인 쇼핑몰 구축',
     portal: '병원 시스템',
